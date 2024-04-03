@@ -5,7 +5,7 @@ def word_count(text):
     return len(words)
 
 def sentence_count(text):
-    sentences = re.split(r'[.!?]+', text)
+    sentences = re.split(r'[.!?]+|\.{3,}', text)
     return len([s for s in sentences if s.strip()])
 
 def count_words_sentences(file_path):
