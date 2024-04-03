@@ -14,3 +14,12 @@ def count_words_sentences(file_path):
         words = word_count(text)
         sentences = sentence_count(text)
         return words, sentences
+    
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) != 2:
+        print("Використання: python word_sentence_counter.py <шлях_до_файлу>")
+    else:
+        file_path = sys.argv[1]
+        words, sentences = count_words_sentences(file_path)
+        print(f'У тексті {words} слів і {sentences} речень')
