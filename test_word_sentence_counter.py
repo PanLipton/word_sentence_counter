@@ -7,3 +7,6 @@ def example_text():
 
 def test_word_count(example_text):
     assert word_count(example_text) == 14
+
+def test_sentence_count(example_text):
+    assert sentence_count(example_text) == 3
